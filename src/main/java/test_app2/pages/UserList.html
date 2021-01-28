@@ -1,0 +1,31 @@
+<head>
+    <title><wicket:message key="userList.title"/></title>
+</head>
+
+<div wicket:id="feedback" class="alert alert-success alert-dismissable"></div>
+
+<h2><wicket:message key="userList.title"/></h2>
+
+<form wicket:id="form">
+    <input wicket:id="add-user" type="submit" value="Add User" 
+        class="btn btn-primary" style="float: right; margin-top: -10px"/>
+</form>
+
+<span wicket:id="navigator"/>
+
+<table class="table table-condensed table-striped table-hover" id="userList">
+    <thead>
+        <tr>
+            <th wicket:id="orderByFirstName"><wicket:message key="user.firstName">[first name]</wicket:message></th>
+            <th wicket:id="orderByLastName"><wicket:message key="user.lastName">[first name]</wicket:message></th>
+            <th wicket:id="orderByEmail"><wicket:message key="user.email">[email]</wicket:message></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr wicket:id="users">
+            <td><a href="#" wicket:id="edit-link"><span wicket:id="user.firstName">[first name]</span></a></td>
+            <td><span wicket:id="user.lastName">[last name]</span></td>
+            <td><span wicket:id="user.email">[email]</span></td>
+        </tr>
+    </tbody>
+</table>
